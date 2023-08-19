@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.198.0/",
+    "bencode": "https://deno.land/x/dt_bencode@0.0.4/mod.ts"
+  },
+  "tasks": {
+    "test": "deno test --allow-all"
+  },
+  "test": {
+    "include": [
+      "./test"
+    ]
+  }
+}
