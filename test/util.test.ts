@@ -76,7 +76,7 @@ Deno.test('test isLowerCaseLetter', () => {
   })
 })
 
-Deno.test('tes isDigit', () => {
+Deno.test('test isDigit', () => {
   UPPER_LETTERS.forEach((char) => {
     assertEquals(isDigit(char.charCodeAt(0)), false)
   })

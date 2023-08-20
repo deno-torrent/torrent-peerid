@@ -72,11 +72,11 @@ Deno.test('decode Shadow style peer id', () => {
 })
 
 Deno.test('test encodeAzStyle', () => {
-  // assertEquals(decode(encodeAzStyle('AZ', '2.0.60')), {
-  //   code: 'AZ',
-  //   name: AZStyleClient.AZ,
-  //   version: '2.0.60'
-  // })
+  assertEquals(decode(encodeAzStyle('AZ', '2.0.60')), {
+    code: 'AZ',
+    name: AZStyleClient.AZ,
+    version: '2.0.60'
+  })
 
   assertEquals(decode(encodeAzStyle('AZ', '2.0.0')), {
     code: 'AZ',
@@ -84,11 +84,17 @@ Deno.test('test encodeAzStyle', () => {
     version: '2.0.0'
   })
 
-  // assertEquals(decode(encodeAzStyle('AZ', '2.0.6')), {
-  //   code: 'AZ',
-  //   name: AZStyleClient.AZ,
-  //   version: '2.0.6'
-  // })
+  assertEquals(decode(encodeAzStyle('AZ', '2.0.6')), {
+    code: 'AZ',
+    name: AZStyleClient.AZ,
+    version: '2.0.6'
+  })
+
+  assertEquals(decode(encodeAzStyle('AZ', '0.0.0')), {
+    code: 'AZ',
+    name: AZStyleClient.AZ,
+    version: '0.0.0'
+  })
 })
 
 Deno.test('test encodeShadowStyle', () => {
@@ -96,5 +102,29 @@ Deno.test('test encodeShadowStyle', () => {
     code: 'S',
     name: ShadowStyleClient.S,
     version: '5.8.11'
+  })
+
+  assertEquals(decode(encodeShadowStyle('S', '0.0.11')), {
+    code: 'S',
+    name: ShadowStyleClient.S,
+    version: '0.0.11'
+  })
+
+  assertEquals(decode(encodeShadowStyle('S', '0.0.0')), {
+    code: 'S',
+    name: ShadowStyleClient.S,
+    version: '0.0.0'
+  })
+
+  assertEquals(decode(encodeShadowStyle('S', '5.8.0')), {
+    code: 'S',
+    name: ShadowStyleClient.S,
+    version: '5.8.0'
+  })
+
+  assertEquals(decode(encodeShadowStyle('S', '5.0.0')), {
+    code: 'S',
+    name: ShadowStyleClient.S,
+    version: '5.0.0'
   })
 })
