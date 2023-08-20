@@ -6,6 +6,9 @@ torrent-peerid is a lightweight Deno library for decode and encode peerid for Bi
 
 ### decode
 
+If peerid is not Azureus or Shadow style, return undefined.
+Currently does not support the parsing of custom Peerid, and this feature will be implemented in the near future
+
 ```ts
 import { decode } from "https://deno.land/x/dt_torrent_peerid/mod.ts";
 
