@@ -1,6 +1,6 @@
 // Azureus风格使用以下编码：'-'，两个字符表示客户端ID，四个ASCII数字表示版本号，'-'，后跟随机数字。
 // 例如：'-AZ2060-' 2060是Azureus的版本号
-export enum AZStyleTorrentClient {
+export enum AZStyleClient {
   '7T' = 'aTorrent for Android',
   'AB' = 'AnyEvent::BitTorrent',
   'AG' = 'Ares',
@@ -104,7 +104,7 @@ export enum AZStyleTorrentClient {
 // 版本字符串中的每个字符表示从0到63的数字。 '0'=0，...，'9'=9，'A'=10，...，'Z'=35，'a'=36，...，'z'=61，'.'=62，'-'=63。
 // Shadow对编码风格的完整解释（包括关于版本字符串后三个字符如何使用的现有约定的信息）可以在这里找到:http://forums.degreez.net/viewtopic.php?t=7070
 // 例如：'S58B-----' 表示Shadow的5.8.11
-export enum ShadowStyleTorrentClient {
+export enum ShadowStyleClient {
   'A' = 'ABC',
   'O' = 'Osprey Permaseed',
   'Q' = 'BTQueue',
