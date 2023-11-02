@@ -1,7 +1,7 @@
 {
   "imports": {
-    "std/": "https://deno.land/std@0.201.0/",
-    "bencode": "https://deno.land/x/dt_bencode@0.1.1/mod.ts"
+    "std/": "https://deno.land/std@0.205.0/",
+    "bencode": "https://deno.land/x/dt_bencode@0.1.2/mod.ts"
   },
   "tasks": {
     "test": "deno test -A"
